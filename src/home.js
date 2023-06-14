@@ -1,36 +1,12 @@
 export default function addHome() {
+
     let content = document.querySelector('#content');
-
-    // header
-    let header = document.createElement('div');
-    header.classList.add('header');
-
-    // tabs within header
-    let tabs = document.createElement('div');
-    tabs.classList.add('tabs');
-
-    let home = document.createElement('button');
-    home.textContent = 'Home';
-    home.classList.add('home');
-    home.classList.add('active');
-    let menu = document.createElement('button');
-    menu.textContent = 'Menu';
-    menu.classList.add('menu');
-    let contact = document.createElement('button');
-    contact.textContent = 'Contact';
-    contact.classList.add('contact');
-
-    tabs.appendChild(home);
-    tabs.appendChild(menu);
-    tabs.appendChild(contact);
-
-    header.appendChild(tabs);
 
     // body
     let body = document.createElement('div');
     body.classList.add('body');
 
-    const container = document.createElement('div');
+    let container = document.createElement('div');
     container.classList.add('container');
 
     // sections within container
@@ -70,5 +46,5 @@ export default function addHome() {
     container.append(title,description,time,location);
     body.appendChild(container);
 
-    content.append(header,body);
+    content.append(body);
 }
