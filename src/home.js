@@ -9,14 +9,14 @@ export default function addHome() {
     let tabs = document.createElement('div');
     tabs.classList.add('tabs');
 
-    let home = document.createElement('div');
+    let home = document.createElement('button');
     home.textContent = 'Home';
     home.classList.add('home');
     home.classList.add('active');
-    let menu = document.createElement('div');
+    let menu = document.createElement('button');
     menu.textContent = 'Menu';
     menu.classList.add('menu');
-    let contact = document.createElement('div');
+    let contact = document.createElement('button');
     contact.textContent = 'Contact';
     contact.classList.add('contact');
 
@@ -31,7 +31,7 @@ export default function addHome() {
     body.classList.add('body');
 
     const container = document.createElement('div');
-    container.classList('container');
+    container.classList.add('container');
 
     // sections within container
 
@@ -69,4 +69,6 @@ export default function addHome() {
 
     container.append(title,description,time,location);
     body.appendChild(container);
+
+    content.append(header,body);
 }
